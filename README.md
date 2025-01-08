@@ -1,8 +1,8 @@
-Runport is a port Scanner in Bash Script
+# __Runport is a port Scanner in Bash Script__
 
 This is a custom port scanning script written in Bash, designed for quick network reconnaissance and to provide information on open ports for security purposes. The script is lightweight, flexible, and does not require Nmap or other external scanning tools, relying instead on native Bash commands. 
 
-FEATURES
+## FEATURES
 
 - **Target IP Prompt**: Requests the target IP address to scan.
 - **Scan Speed Selection**: Choose between fast, medium, and slow scan speeds, influencing timeout delay.
@@ -13,9 +13,9 @@ FEATURES
 - **Output File Option**: Option to save scan results in a file.
 - **Service Detection**: Identifies standard ports and includes custom services for recognized ports.
 
-USAGE
+## USAGE
 
--Prerequisites
+### Prerequisites
 
 Ensure you have Bash installed (default on most Linux systems). You should also have network permissions to connect to the target IP.
 
@@ -23,16 +23,15 @@ Ensure you have Bash installed (default on most Linux systems). You should also 
 
 Clone the repository or download the script file. Make the script executable and run it with the following syntax:
 
-```bash
-./scan_script.sh [options]
+    ./scan_script.sh [options]
 
-Options
+### Options
 
     -h, --help: Display the help information.
     -v, --verbose: Enables full verbose mode (displays each port tested).
     -p, --port-range <ports>: Specify a custom port range to scan (e.g., 1-1000).
 
-Interactive Prompts
+### Interactive Prompts
 
 The script will prompt you for additional information as it runs:
 
@@ -45,25 +44,25 @@ The script will prompt you for additional information as it runs:
         All ports (1-65535)
         Custom range (e.g., 1-1000)
 
-Example Commands
+### Example Commands
 
-    Display help information:
+Display help information:
 
-./scan_script.sh -h
+    ./scan_script.sh -h
 
 Run a verbose scan on ports 1-100 with results saved to a file:
 
-./scan_script.sh -v -p 1-100
+    ./scan_script.sh -v -p 1-100
 
 Run a standard port scan with medium speed:
 
     ./scan_script.sh
 
-Output
+## Output
 
 The scan results will include a summary of closed and open ports. If specified, results are saved in a timestamped file with details of detected services.
 
-Output Example:
+### Output Example:
 
 Scanning IP: 192.168.1.1
 Progress: 25%
@@ -76,11 +75,11 @@ Ports scanned: 1000
 Closed ports: 998
 Open ports: 2 (22, 80)
 
-Pause, Resume, and Stop
+### Pause, Resume, and Stop
 
     Pause: Ctrl+Z to pause the scan, fg to resume.
     Stop: Ctrl+C to terminate the scan.
 
-Contributing
+## Contributing
 
 Feel free to submit issues, fork the repository, and send pull requests. Contributions are always welcome.
